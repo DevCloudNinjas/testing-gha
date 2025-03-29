@@ -12,7 +12,8 @@ jobs:
               run: echo "The repo used is ${{ github.repo }} and the ref of the repo is ${{ github.ref }}"
             - name: Running Git Checkout (hope we remember what this does)
               uses: actions/checkout@v3
-              run: echo "The ${{ github.repo }} repo has been cloned to the runner."
+            - name: Git repo clone
+              run: echo "The repo ${{ github.repo }} has been cloned"
             - name: Running the LS comand to list what is in the repo
               run: ls ${{ github.workspace }} 
 
